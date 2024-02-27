@@ -4,7 +4,7 @@ import "fmt"
 
 func main() {
 	card := newCard()
-	cards := []string{"new card", newCard()}
+	cards := deck{"new card", newCard()}
 
 	cards = append(cards, "Six of Spades")
 
