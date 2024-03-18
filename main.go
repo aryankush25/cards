@@ -14,7 +14,7 @@ func main() {
 
 	// cards.saveToFile("my_cards.md")
 
-	cards := newDeckFromFile("my_cards")
+	cards := newDeckFromFile("my_cards.md")
 	cards.print()
 	fmt.Println(cards.toString(", "))
 }
