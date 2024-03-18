@@ -40,6 +40,7 @@ func newDeck() deck {
 	return cards
 }
 
+// Receiver function
 func (d deck) print() {
 	for i, card := range d {
 		fmt.Println(i+1, card)
@@ -50,10 +51,12 @@ func deal(d deck, handSize int) (deck, deck) {
 	return d[:handSize], d[handSize:]
 }
 
+// Receiver function
 func (d deck) toString(del string) string {
 	return strings.Join([]string(d), del)
 }
 
+// Receiver function
 func (d deck) saveToFile(filename string) error {
 	return ioutil.WriteFile(filename, []byte(d.toString(", ")), 0666)
 }
@@ -71,6 +74,7 @@ func newDeckFromFile(filename string) deck {
 	return deck(s)
 }
 
+// Receiver function
 func (d deck) shuffle() {
 	source := rand.NewSource(time.Now().UnixNano())
 	r := rand.New(source)
