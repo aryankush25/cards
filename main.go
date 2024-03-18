@@ -10,5 +10,5 @@ func main() {
 	// hand.print()
 	// remainingCards.print()
 
-	fmt.Println(cards.toString())
+	fmt.Println(cards.toString(", "))
 }

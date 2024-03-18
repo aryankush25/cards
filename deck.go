@@ -46,6 +46,6 @@ func deal(d deck, handSize int) (deck, deck) {
 	return d[:handSize], d[handSize:]
 }
 
-func (d deck) toString() string {
-	return strings.Join([]string(d), ", ")
+func (d deck) toString(del string) string {
+	return strings.Join([]string(d), del)
 }
